@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Responsive image example</title>
+  <style>
+    .image {
+      padding: 2em 1em;
+      text-align: center;
+      background-image: url(coffee-beans-small.jpg);
+      background-size: 100%;
+      color: #fff;
+      text-shadow: 0.1em 0.1em 0.3em #000;
+    }
+
+    @media (min-width: 35em) {
+      .image {
+        padding: 5em 3em;
+        font-size: 1.2rem;
+        background-image: url(coffee-beans-medium.jpg);
+      }
+    }
+
+    @media (min-width: 50em) {
+      .image {
+        padding: 7em 6em;
+        background-image: url(coffee-beans.jpg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div alt="A white coffee mug on a bed of coffee beans" class="image">
+</body>
+</html>
