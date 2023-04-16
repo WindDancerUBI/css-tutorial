@@ -1,5 +1,9 @@
+<!--
+ * @Title: your project
+ * @Author: huangjitao
+ * @Date: 2023-04-15 13:13:33
+ * @Description: description of this file
+-->
 # css-tutorial
 
-## 第八章：响应式布局
-
-[1.移动优先](/8-responsive/mobile.html)
+CSS基本概念教程

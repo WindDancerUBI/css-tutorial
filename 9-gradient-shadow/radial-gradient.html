@@ -1,0 +1,57 @@
+<!--
+ * @Title: 径向渐变
+ * @Author: huangjitao
+ * @Date: 2023-04-16 17:55:44
+ * @Description: description of this file
+-->
+<!doctype>
+<head>
+  <style type="text/css">
+    .container {
+      width: 400px;
+      max-width: 100%;
+      margin: 1em auto;
+    }
+    .radial-gradient {
+      height: 200px;
+      width: 100%;
+      background-image: radial-gradient(white, blue);
+    }
+    .circle-gradient {
+      height: 200px;
+      width: 100%;
+      background-image: radial-gradient(circle, white, blue);
+    }
+    .corner-gradient {
+      height: 200px;
+      width: 100%;
+      background-image: radial-gradient(3em at 25% 25%, white, blue);
+    }
+    .multiple-gradient {
+      height: 200px;
+      width: 100%;
+      background-image: radial-gradient(circle, blue 0%, white 50%, red 100%);
+      border-radius: 0.3em;
+    }
+    .repeat-gradient {
+      height: 200px;
+      width: 100%;
+      background-image: repeating-radial-gradient(circle, blue 0, blue 1em, white 1em, white 2em);
+      border-radius: 0.3em;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <p>基础渐变：</p>
+    <div class="radial-gradient"></div>
+    <p>圆形渐变：</p>
+    <div class="circle-gradient"></div>
+    <p>边缘扩散渐变：</p>
+    <div class="corner-gradient"></div>
+    <p>多个颜色节点渐变：</p>
+    <div class="multiple-gradient"></div>
+    <p>重复渐变：</p>
+    <div class="repeat-gradient"></div>
+  </div>
+</body>
