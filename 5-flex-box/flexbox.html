@@ -1,0 +1,52 @@
+<!--
+ * @Title: 弹性布局
+ * @Author: huangjitao
+ * @Date: 2023-04-18 15:35:12
+ * @Description: description of this file
+-->
+<!doctype html>
+<head>
+  <style>
+    .site-nav {
+      display: flex;
+      padding: .5em;
+      background-color: #5f4b44;
+      list-style-type: none;
+      border-radius: .2em;
+    }
+
+    .site-nav > li {
+      margin-top: 0;
+    }
+
+    .site-nav > li > a {
+      display: block;
+      padding: .5em .5em;
+      background-color: #cc6b5a;
+      color: white;
+      text-decoration: none;
+    }
+
+    .site-nav > li + li {
+      margin-left: 1em;
+    }
+
+    .site-nav > .nav-right {
+      margin-left: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <ul class="site-nav">
+      <li><a href="/">Home</a></li>
+      <li><a href="/features">Features</a></li>
+      <li><a href="/pricing">Pricing</a></li>
+      <li><a href="/support">Support</a></li>
+      <li class="nav-right">
+        <a href="/about">About</a>
+      </li>
+    </ul>
+  </nav>
+</body>

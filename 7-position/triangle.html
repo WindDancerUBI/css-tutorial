@@ -1,0 +1,185 @@
+<!--
+ * @Title: your project
+ * @Author: huangjitao
+ * @Date: 2023-04-18 15:56:57
+ * @Description: description of this file
+-->
+<!doctype html>
+<head>
+  <style>
+    .top-banner {
+      padding: 1em 0;
+      background-color: #ffd698;
+    }
+
+    .top-banner-inner {
+      width: 80%;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .modal {
+      display: none;
+    }
+
+    .modal-backdrop {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-body {
+      position: fixed;
+      top: 20%;
+      bottom: 20%;
+      right: 20%;
+      left: 20%;
+      padding: 2em 3em;
+      background-color: white;
+      overflow: auto;
+    }
+
+    #modal-close {
+      border: 0;
+      cursor: pointer;
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 0.3em;
+      font-size: 2em;
+      height: 1.5em;
+      width: 1.5em;
+      cursor: pointer;
+    }
+    #modal-close::before {
+      display: block;
+      content: '\00D7';
+    }
+    .container {
+      width: 80%;
+      max-width: 1000px;
+      margin: 1em auto
+    }
+
+    .dropdown {
+      display: inline-block;
+      position: relative;
+    }
+
+    .dropdown-label {
+      padding: 0.5em 2em 0.5em 1.5em;
+      border: 1px solid #ccc;
+      background-color: #eee;
+    }
+
+    .dropdown-label::after {
+      content: "";
+      position: absolute;
+      right: 1em;
+      top: 1em;
+      border: 0.3em solid;
+      border-color: black transparent transparent;
+    }
+    .dropdown:hover .dropdown-label::after {
+      top: 0.7em;
+      border-color: transparent transparent black;
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 2.1em;
+      min-width: 100%;
+      background-color: #eee;
+    }
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+
+    .submenu {
+      padding-left: 0;
+      margin: 0;
+      list-style-type: none;
+      border: 1px solid #999;
+    }
+
+    .submenu > li + li {
+      border-top: 1px solid #999;
+    }
+
+    .submenu > li > a {
+      display: block;
+      padding: 0.5em 1.5em;
+      background-color: #eee;
+      color: #369;
+      text-decoration: none;
+    }
+
+    .submenu > li > a:hover {
+      background-color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="top-banner">
+    <div class="top-banner-inner">
+      <button id="modal-open">注册</button>
+    </div>
+  </header>
+  <div class="modal" id="modal">
+    <div class="modal-backdrop"></div>
+    <div class="modal-body">
+      <button id="modal-close"></button>
+      <h2>注册</h2>
+      <p>请填写注册信息</p>
+      <form>
+        <p>
+          <label for="username">账号:</label>
+          <input type="text" name="username"/>
+        </p>
+        <p>
+          <label for="password">密码:</label>
+          <input type="password" name="password"/>
+        </p>
+        <p><button type="modal-submit">提交</button></p>
+      </form>
+    </div>
+  </div>
+  <div class="container">
+    <nav>
+      <div class="dropdown">
+        <div class="dropdown-label">Main Menu</div>
+        <div class="dropdown-menu">
+          <ul class="submenu">
+            <li><a href="/">Home</a></li>
+            <li><a href="/coffees">Coffees</a></li>
+            <li><a href="/brewers">Brewers</a></li>
+            <li><a href="/specials">Specials</a></li>
+            <li><a href="/about">About us</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <h1>Wombat Coffee Roasters</h1>
+  </div>
+</body>
+<script type="text/javascript" style="position: fixed;">
+  var button = document.getElementById('modal-open');
+  var close = document.getElementById('modal-close');
+  var modal = document.getElementById('modal');
+
+  button.addEventListener('click', function(event) {
+    event.preventDefault();
+    modal.style.display = 'block';
+  });
+
+  close.addEventListener('click', function(event) {
+    event.preventDefault();
+    modal.style.display = 'none';
+  });
+</script>
